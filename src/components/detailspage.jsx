@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchCryptoData } from './action';
@@ -23,7 +25,9 @@ function DetailPage() {
   return (
     <div className="detail-page">
       <Link to="/" className="home-link">
-        <button type="button" className="home-button">Home</button>
+        <div className="back-button">
+          <FontAwesomeIcon icon={faArrowLeft} className="back-icon" />
+        </div>
       </Link>
       <table className="crypto-details">
         <tbody>

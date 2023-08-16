@@ -13,14 +13,15 @@ export const fetchCryptoData = () => async (dispatch) => {
       {
         params: {
           vs_currency: 'usd',
-          ids: 'bitcoin,ethereum,ripple,cardano,polkadot,uniswap,binancecoin,solana,dogecoin,avalanche,terra,chainlink,polygon,theta-token,algorand,ftx-token,shiba-inu,hedera-hashgraph,vechain,stellar',
-          per_page: 20,
         },
       },
     );
+
+    const filteredData = response.data.filter((crypto) => crypto.id !== 'ethereum');
+
     dispatch({
       type: FETCH_CRYPTO_DATA_SUCCESS,
-      payload: response.data,
+      payload: filteredData,
     });
   } catch (error) {
     dispatch({ type: FETCH_CRYPTO_DATA_FAILURE, payload: error });

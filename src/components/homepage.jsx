@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'; // Import Link
 import { fetchCryptoData } from './action';
@@ -13,7 +15,12 @@ function HomePage() {
   }, [dispatch]);
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <div className="loading">
+        <FontAwesomeIcon icon={faSpinner} className="loading-icon" spin />
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
@@ -28,7 +35,11 @@ function HomePage() {
   return (
     <div className="crypto-list">
       {data.map((crypto) => (
-        <Link to={`/crypto/${crypto.id}`} key={crypto.id} className="crypto-card">
+        <Link
+          to={`/crypto/${crypto.id}`}
+          key={crypto.id}
+          className="crypto-card"
+        >
           <img src={crypto.image} alt={`${crypto.name} Logo`} />
           <h2>{crypto.name}</h2>
           <p className="price">

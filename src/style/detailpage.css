@@ -7,7 +7,7 @@
 }
 
 .crypto-details td {
-  max-width: 140px;
+  max-width: 110px;
   border: 1px solid #ddd;
   overflow: hidden;
   white-space: nowrap;
@@ -27,6 +27,8 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #413e3e;
+  color: white;
 }
 
 .home-link {
@@ -48,4 +50,28 @@
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.back-icon {
+  font-size: 1.5rem;
+  margin-right: 5px;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .crypto-details {
+    max-width: 100%;
+  }
+
+  .crypto-details td {
+    max-width: none;
+    white-space: normal;
+    text-overflow: clip;
+  }
 }
