@@ -1,6 +1,6 @@
-// src/components/HomePage.js
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'; // Import Link
 import { fetchCryptoData } from './action';
 import '../style/homepage.css';
 
@@ -28,17 +28,14 @@ function HomePage() {
   return (
     <div className="crypto-list">
       {data.map((crypto) => (
-        <div key={crypto.id} className="crypto-card">
+        <Link to={`/crypto/${crypto.id}`} key={crypto.id} className="crypto-card">
           <img src={crypto.image} alt={`${crypto.name} Logo`} />
           <h2>{crypto.name}</h2>
           <p className="price">
             Price: $
             {crypto.current_price}
           </p>
-          <a className="details-link" href={`/crypto/${crypto.id}`}>
-            More Details
-          </a>
-        </div>
+        </Link>
       ))}
     </div>
   );

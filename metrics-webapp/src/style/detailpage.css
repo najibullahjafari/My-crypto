@@ -1,3 +1,28 @@
+
+.crypto-details {
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.crypto-details td {
+  max-width: 140px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.crypto-details img {
+  max-width: 100px;
+  height: auto;
+}
+
+.crypto-details h2 {
+  margin: 0;
+}
+
 .detail-page {
   max-width: 800px;
   margin: 0 auto;
@@ -23,24 +48,4 @@
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
-}
-
-.crypto-details {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-}
-
-.crypto-details td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-.crypto-details img {
-  max-width: 100px;
-  height: auto;
-}
-
-.crypto-details h2 {
-  margin: 0;
 }

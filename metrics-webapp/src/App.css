@@ -2,15 +2,19 @@ html {
   margin: 0;
   padding: 0;
 }
-.App {
+
+.app {
   text-align: center;
   margin: 0;
   padding: 0;
+  max-width: 450px;
+  background-color: rgb(64, 65, 67);
 }
 
 body {
   margin: 0;
   padding: 0;
+  max-width: 450px;
 }
 
 .main {

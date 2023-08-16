@@ -8,7 +8,7 @@ import Footer from './components/footer';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Header />
         {' '}
         {/* Header component placed here */}

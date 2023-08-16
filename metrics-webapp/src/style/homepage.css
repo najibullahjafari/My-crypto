@@ -5,18 +5,23 @@ html {
 
 .crypto-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  margin: 20px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .crypto-card {
   border: 1px solid #ddd;
   padding: 20px;
   background-color: #413e3e;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
+
+.crypto-card:hover {
+  box-shadow: 8px 8px 6px rgba(39, 36, 36, 50%);
+  transform: scale(0.9);
+  border-radius: 9px;
+}
+
 
 .crypto-card img {
   max-width: 100%;
@@ -25,7 +30,7 @@ html {
 
 .crypto-card h2 {
   margin-top: 10px;
-  color: rgb(253, 253, 253);
+  color: #fff;
 }
 
 .price {
@@ -44,7 +49,7 @@ html {
 
 @media screen and (max-width: 768px) {
   .crypto-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .crypto-card {
