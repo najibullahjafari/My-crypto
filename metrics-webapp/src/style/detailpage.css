@@ -1,0 +1,46 @@
+.detail-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.crypto-details {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.crypto-details td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.crypto-details img {
+  max-width: 100px;
+  height: auto;
+}
+
+.crypto-details h2 {
+  margin: 0;
+}
