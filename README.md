@@ -63,7 +63,7 @@ The My Crypto is a responsive web app that show the current price of most popula
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Check out the live demo of this project [here](https://64cd86e7739d9460c2d1d2c9--lucent-bavarois-61bf5d.netlify.app/).
+Check out the live demo of this project [here](https://64ddfa6f503d267147502fb8--tiny-sfogliatella-1f3791.netlify.app/).
 
 ### Key Features <a name="key-features"></a>
 
