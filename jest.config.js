@@ -1,9 +1,15 @@
 // jest.config.js
 export default {
   // ...other configuration options
-  testEnvironment: 'jsdom', // or 'node' if necessary
-  transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+  testEnvironment: 'node',
+  transform: {},
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
   },
-  moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
+  extensionsToTreatAsEsm: ['.js', '.jsx'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1', // Adjust the path as per your project structure
+  },
 };

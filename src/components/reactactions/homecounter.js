@@ -14,9 +14,12 @@ function HomeCounter() {
   return (
     <div>
       <h1>Home Counter</h1>
-      <p>Count: {count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <p>
+        Count:
+        {count}
+      </p>
+      <button type="button" onClick={increment}>Increment</button>
+      <button type="button" onClick={decrement}>Decrement</button>
     </div>
   );
 }

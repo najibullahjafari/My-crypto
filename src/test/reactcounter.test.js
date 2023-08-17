@@ -1,24 +1,16 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // Import jest-dom
-
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import Counter from '../components/reactactions/reactcouter';
 
-test('renders counter with initial count of 0', () => {
-  const { getByText } = render(<Counter />);
-  const countElement = getByText(/Count: 0/i);
-  expect(countElement).toBeInTheDocument(); // Use toBeInTheDocument
-});
-
 test('increments and decrements count correctly', () => {
-  const { getByText } = render(<Counter />);
-  const incrementButton = getByText(/Increment/i);
-  const decrementButton = getByText(/Decrement/i);
-  const countElement = getByText(/Count:/i);
+  render(<Counter />);
+
+  const incrementButton = screen.getByText('Increment');
+  const decrementButton = screen.getByText('Decrement');
 
   fireEvent.click(incrementButton);
-  expect(countElement.textContent).toBe('Count: 1');
+  expect(screen.getByText('Count: 1')).toBeInTheDocument();
 
   fireEvent.click(decrementButton);
-  expect(countElement.textContent).toBe('Count: 0');
+  expect(screen.getByText('Count: 0')).toBeInTheDocument();
 });
