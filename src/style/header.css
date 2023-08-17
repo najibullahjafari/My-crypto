@@ -1,0 +1,43 @@
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-item {
+  text-decoration: none;
+  font-family: cursive, sans-serif;
+  margin: 0 1rem;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-item:hover {
+  background-color: #555;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #fff;
+}
